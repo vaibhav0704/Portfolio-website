@@ -4,9 +4,12 @@ export default{
     type: 'document',
     fields:[
         {
-            name:'year',
-            title:'Year',
-            type:'string'
+            name:'imgUrl',
+            title:'ImgUrl',
+            type: 'image',
+            options: {
+              hotspot: true,
+            },
         },
         {
             name:'works',

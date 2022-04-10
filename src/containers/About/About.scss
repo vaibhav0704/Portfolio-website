@@ -39,4 +39,10 @@
       height: 320px;
     }  
   }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 8rem;
+  }
 }

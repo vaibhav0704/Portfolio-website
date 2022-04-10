@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './About.scss'
 import { motion } from 'framer-motion';
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from '../../client' 
 
 const About = () => {
@@ -22,7 +22,7 @@ const About = () => {
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
-            whileinView={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: 'tween' }}
             className="app__profile-item"
@@ -38,4 +38,8 @@ const About = () => {
   )
 }
 
-export default AppWrap(About, 'about');
+export default AppWrap(
+  MotionWrap(About, "app__about"), 
+  'about',
+  "app__whitebg"
+);
